@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Najma's Pet Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Najma's Pet Gallery</h1>
+    <nav>
+      <button onclick="showSection('cat-section')">Random Cats</button>
+      <button onclick="showSection('liked-section')">Your Pets</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Random Cat Viewer Section -->
+    <section id="cat-section" class="page">
+      <h2>Random Cat Viewer</h2>
+      <button id="cat-button">Show Cat</button>
+      <div id="cat-container"></div>
+      <button id="fact-button">Get a Cat Fact</button>
+      <p id="cat-fact"></p>
+    </section>
+
+    <!-- User's Pets and Liked Cats Section -->
+    <section id="liked-section" class="page" style="display: none;">
+      <h2>Your Pets</h2>
+      <form id="pet-form">
+        <input type="text" id="pet-name" placeholder="Pet Name" required />
+        <input type="text" id="pet-type" placeholder="Pet Type" required />
+        <button type="submit">Add Pet</button>
+      </form>
+      <ul id="user-pets"></ul>
+
+      <h3>Liked Cats</h3>
+      <div id="liked-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Najma | <span id="year"></span></p>
+  </footer>
+
+  <!-- ✅ Only one script tag -->
+  <script src="script.js"></script>
+</body>
+</html>
